@@ -1,0 +1,19 @@
+.category_name{
+    position: relative;
+    top:50%;
+    left:10%;
+    font-size:25px;
+    font-weight:600;
+}
+
+.card-item{
+    position: relative;
+    top:50%;
+    left:10%;
+}
+
+.card-title{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

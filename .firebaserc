@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "medibuddy-32bb9": {
+      "hosting": {
+        "medlife": [
+          "medibuddy-32bb9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "medibuddy-32bb9"
+  }
+}

@@ -1,0 +1,122 @@
+<div class="container-fluid p-5 bg-primary text-white">
+    <div class="row">
+        <h3 class="text-center fw-semibold">Get Huge Savings on Medicines</h3>
+    </div>
+
+    <div class="d-flex justify-content-center mb-3">
+        <div class="p-2"><i class="bi bi-check-circle-fill me-2"></i>100 % Genuine Medicines</div>
+        <div class="p-2"><i class="bi bi-check-circle-fill me-2"></i>Trusted Pharmacies</div>
+        <div class="p-2"><i class="bi bi-check-circle-fill me-2"></i>Delivery to your doorstep</div>
+        <div class="p-2"><i class="bi bi-check-circle-fill me-2"></i>Store Pick up</div>
+    </div>
+</div>      
+
+<div class="container w-75 ">
+    <div class="input-group input-group-lg rounded-3">
+        <span class="input-group-text bg-body search-heading" id="inputGroup-sizing-lg">{{ showDefaultPinCode ? "Vasai 401101" : pincodeDetails?.pincodeCity + " "+ pincodeDetails?.pincode }} <span><i class="bi bi-chevron-down ms-3 " data-bs-toggle="modal" data-bs-target="#exampleModal"></i></span></span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Search Medicine">
+        <span class="input-group-text search-heading bg-body text-primary fw-semibold" id="inputGroup-sizing-lg" ><i class="bi bi-search ms-3 fs-5 me-2"></i> Search</span>
+    </div>
+</div>
+
+<div class="container w-75">
+<div class="row">
+<img src="https://www.medibuddy.in/assets/banners/medicine-page.webp" alt="">
+</div>
+</div>
+
+
+<!-- <div class="container w-75 mt-4">
+    <div class="row">
+        <a class="col-md-6 gilder-silde display-center">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://www.medibuddy.in/assets/banners/otcStore.webp" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+               </div>
+               </a>
+        <a class="col-md-6 gilder-silde display-center">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://www.medibuddy.in/assets/offers/CallOffer.png" class="d-block w-100" alt="...">
+                  </div>
+                  </div>
+        </div>
+        </a> -->
+    <!-- <a class="col-md-6">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://www.medibuddy.in/assets/offers/discount-home-delivered.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+           </div>
+        </a> -->
+        <!-- </div>
+</div> -->
+
+
+<div class="container mt-4">
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active d-flex align-content-between">
+            <div class="w-50">
+            <img src="https://www.medibuddy.in/assets/banners/otcStore.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="w-50">
+            <img src="https://www.medibuddy.in/assets/offers/CallOffer.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+          <div class="carousel-item d-flex align-content-between">
+            <div class="w-50">
+            <img src="https://www.medibuddy.in/assets/offers/CallOffer.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="w-50">
+            <img src="https://www.medibuddy.in/assets/offers/discount-home-delivered.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</div>
+
+
+
+<div class="container mt-5">
+<div class="clearfix">
+    <h2 class="ms-4 float-start">Top Deals</h2>
+    <a class="float-end fs-4 text-decoration-none" routerLink="/top-deals-by-category">View All</a>
+</div>
+<app-top-deals></app-top-deals>
+
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" #closebtn></button>
+      </div>
+      <div class="modal-body">
+       <label for="id1" class="fs-5 fw-semibold">Set Your Location</label>
+       <input type="text" name="" id="id1" [(ngModel)]="pincode" maxlength="6" required class="form-control">
+      </div>
+      <div class="invalid-feedback d-block" *ngIf="displayErrorMessage">
+        No Providers available at this pincode.
+      </div>
+      <div class="d-grid gap-2 m-4">
+        <button class="btn btn-primary mb-3" type="submit" (click)="verifyPincode()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
